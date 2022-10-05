@@ -1,0 +1,443 @@
+fileFormatVersion: 2
+guid: 2fced2be0534e422a8de700f17340865
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GracieSketches_0
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 929
+        width: 108
+        height: 114
+      alignment: 9
+      pivot: {x: 0.8594083, y: 0.3935959}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002f79748be7d41f5b4de96e7404f5e5
+      internalID: 1574650062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketches_1
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 1027
+        width: 223
+        height: 358
+      alignment: 9
+      pivot: {x: 0.5108785, y: 0.045970727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514494c18a84c4af89c9ba61881cfa9d
+      internalID: 885326289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketches_2
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 914
+        width: 107
+        height: 125
+      alignment: 9
+      pivot: {x: 0.15990527, y: 0.46118408}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c37b3d00fce144cab3218ab6e33a5c5
+      internalID: 1714102602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketches_3
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 940
+        width: 166
+        height: 55
+      alignment: 9
+      pivot: {x: 0.90920615, y: 0.588218}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c47afd908cd415cb56753fa1fc8fa9
+      internalID: 1130201338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketches_4
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 940
+        width: 166
+        height: 55
+      alignment: 9
+      pivot: {x: 0.85074806, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5194fe2061274ea4bc1a689bebb993c
+      internalID: -598239444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketches_5
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 653
+        width: 248
+        height: 361
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc09499831f34af8974877a5270c8b8
+      internalID: -1819778247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketches_6
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 940
+        width: 166
+        height: 55
+      alignment: 9
+      pivot: {x: 0.13463767, y: 0.588218}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34c39136086a4df88ce6d7f833da18e
+      internalID: -1993439184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketches_7
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 940
+        width: 166
+        height: 55
+      alignment: 9
+      pivot: {x: 0.14925228, y: 0.54410845}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21528e2c0864d4739a94f9417d56d5da
+      internalID: 1932355608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketches_8
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 445
+        width: 101
+        height: 226
+      alignment: 9
+      pivot: {x: 0.5720596, y: 0.89717793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e7b6ebfb3c84072a0da41b5e5fe0e0
+      internalID: 64586611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketches_9
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 434
+        width: 101
+        height: 226
+      alignment: 9
+      pivot: {x: 0.37989974, y: 0.9293815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59c0204ec52046de819b1c51c915a60
+      internalID: -524696709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketches_10
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 250
+        width: 96
+        height: 193
+      alignment: 9
+      pivot: {x: 0.67689705, y: 0.9022394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638153ad801b44cc284c67f6bf737e1a
+      internalID: -1096188809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketches_11
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 243
+        width: 96
+        height: 193
+      alignment: 9
+      pivot: {x: 0.4241867, y: 0.9022394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38be0618f9f3b4a7e86a103072ac08e1
+      internalID: 774285817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketches_12
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 72
+        width: 126
+        height: 105
+      alignment: 9
+      pivot: {x: 0.8273185, y: 0.8003627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e861e8c94fa4cbea5aaae4457839a2
+      internalID: 1424140088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketches_13
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 140
+        width: 126
+        height: 105
+      alignment: 9
+      pivot: {x: 0.11491951, y: 0.77725774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2c110c6ad724f418a345d4eb8da934
+      internalID: 1396595698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 51d0723e9dae9439eb23208362f40792
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GracieSketches_2: 1714102602
+      GracieSketches_4: -598239444
+      GracieSketches_10: -1096188809
+      GracieSketches_6: -1993439184
+      GracieSketches_13: 1396595698
+      GracieSketches_7: 1932355608
+      GracieSketches_8: 64586611
+      GracieSketches_11: 774285817
+      GracieSketches_9: -524696709
+      GracieSketches_0: 1574650062
+      GracieSketches_3: 1130201338
+      GracieSketches_12: 1424140088
+      GracieSketches_5: -1819778247
+      GracieSketches_1: 885326289
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
