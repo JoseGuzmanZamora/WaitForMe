@@ -39,10 +39,10 @@ TextureImporter:
     wrapU: 0
     wrapV: 0
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +53,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -115,21 +115,241 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GracieSketchesSide_0
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 1030
+        width: 335
+        height: 367
+      alignment: 9
+      pivot: {x: 0.48551646, y: 0.06371538}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ac0b741a9114dd8ba8dc637ed56179
+      internalID: -542633239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesSide_1
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 914
+        width: 107
+        height: 125
+      alignment: 9
+      pivot: {x: 0.1825784, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d143b7d4bcfd4d729a474e8a2fdf151
+      internalID: 1534526352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesSide_2
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 610
+        width: 182
+        height: 410
+      alignment: 9
+      pivot: {x: 0.3267138, y: 0.08580367}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62bc486310604847963cb7b759bace9
+      internalID: -776064141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesSide_3
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 966
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79fc5af2faeb4bdfa5abc2acf5d5f2f
+      internalID: 1394830076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesSide_4
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 940
+        width: 166
+        height: 55
+      alignment: 9
+      pivot: {x: 0.00310691, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e1c1d67f3274f118bbdad844db0dac
+      internalID: 413507096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesSide_5
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 940
+        width: 166
+        height: 55
+      alignment: 9
+      pivot: {x: 0.09079384, y: 0.54410845}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8816f5d5ca4c40878cf7c34fc1de7d1
+      internalID: -8299024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesSide_6
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 655
+        width: 34
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28cb2fd2a1dcc4fe0930dcce0f302c8f
+      internalID: 426963488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesSide_7
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 498
+        width: 101
+        height: 226
+      alignment: 9
+      pivot: {x: 0.3558809, y: 0.89717793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab081c13a687d4af4b667afee49bb8cc
+      internalID: -1910693550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesSide_8
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 243
+        width: 96
+        height: 193
+      alignment: 9
+      pivot: {x: 0.4241867, y: 0.92737955}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7537ee2ff8134497397a570794237ad2
+      internalID: 1377399570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesSide_9
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 171
+        width: 133
+        height: 63
+      alignment: 9
+      pivot: {x: 0.09870532, y: 0.53850836}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca299e6554b8b4a7db88c2878b21b845
+      internalID: -1773218304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f0fd587cecd0640a2a359cb4f0b3a21e
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GracieSketchesSide_4: 413507096
+      GracieSketchesSide_2: -776064141
+      GracieSketchesSide_7: -1910693550
+      GracieSketchesSide_9: -1773218304
+      GracieSketchesSide_0: -542633239
+      GracieSketchesSide_8: 1377399570
+      GracieSketchesSide_1: 1534526352
+      GracieSketchesSide_5: -8299024
+      GracieSketchesSide_3: 1394830076
+      GracieSketchesSide_6: 426963488
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -39,10 +39,10 @@ TextureImporter:
     wrapU: 0
     wrapV: 0
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +53,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -115,21 +115,329 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GracieSketchesBack_0
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 929
+        width: 108
+        height: 114
+      alignment: 9
+      pivot: {x: 0.8818715, y: 0.3935959}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d8f71a328f742e4a38df516b28d9db
+      internalID: 440770008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesBack_1
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 1027
+        width: 239
+        height: 348
+      alignment: 9
+      pivot: {x: 0.48984927, y: 0.04686658}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150c5d3d7b4fc4a98a17513a5e06e180
+      internalID: -1142730265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesBack_2
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 914
+        width: 107
+        height: 125
+      alignment: 9
+      pivot: {x: 0.13723327, y: 0.4805918}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db37eebe31b94daa87a78f013027a34
+      internalID: -2058179292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesBack_3
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 940
+        width: 166
+        height: 55
+      alignment: 9
+      pivot: {x: 0.9238204, y: 0.45589045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc0629b685b64f239adfe022d05c778
+      internalID: 342877373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesBack_4
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 940
+        width: 166
+        height: 55
+      alignment: 9
+      pivot: {x: 0.8945919, y: 0.45589045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f249c876595694c9592159bd0b9f1ebc
+      internalID: -919481505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesBack_5
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 665
+        width: 248
+        height: 361
+      alignment: 9
+      pivot: {x: 0.4706529, y: 0.06990453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65172d2ee421b4863b7221becae9fa2b
+      internalID: -441728469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesBack_6
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 940
+        width: 166
+        height: 55
+      alignment: 9
+      pivot: {x: 0.03233613, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcd623a8d0734d958807b4f47f36378
+      internalID: 335172986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesBack_7
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 940
+        width: 166
+        height: 55
+      alignment: 9
+      pivot: {x: 0.09079384, y: 0.54410845}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d8a36a397974604b3d82a0e91d1054
+      internalID: 987599567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesBack_8
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 477
+        width: 102
+        height: 226
+      alignment: 9
+      pivot: {x: 0.6902753, y: 0.94011617}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a5262ff6b384c0b9813217e47e4c9f
+      internalID: -1124777691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesBack_9
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 487
+        width: 101
+        height: 226
+      alignment: 9
+      pivot: {x: 0.37990093, y: 0.91864717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7f5e10d92144428bc06356d648827e
+      internalID: -51207955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesBack_10
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 206
+        width: 96
+        height: 193
+      alignment: 9
+      pivot: {x: 0.60108376, y: 0.9022394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842b19e179d414813b05977b9e1e5ff6
+      internalID: -2119290647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesBack_11
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 218
+        width: 96
+        height: 193
+      alignment: 9
+      pivot: {x: 0.37364578, y: 0.8896693}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4a538b435cb49c29016e7f2487c731
+      internalID: -1573996734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesBack_12
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 29
+        width: 85
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5000007, y: 0.86556214}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0727d886f81e7424287a0f16e13e5911
+      internalID: 1215308003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GracieSketchesBack_13
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 29
+        width: 85
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9320286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c459a1b66afe54a3fa75e22a6493e754
+      internalID: 1627475263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: df6d2f26a324e4d759ed458d8cc03f05
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GracieSketchesBack_5: -441728469
+      GracieSketchesBack_6: 335172986
+      GracieSketchesBack_12: 1215308003
+      GracieSketchesBack_8: -1124777691
+      GracieSketchesBack_9: -51207955
+      GracieSketchesBack_1: -1142730265
+      GracieSketchesBack_13: 1627475263
+      GracieSketchesBack_3: 342877373
+      GracieSketchesBack_7: 987599567
+      GracieSketchesBack_4: -919481505
+      GracieSketchesBack_11: -1573996734
+      GracieSketchesBack_2: -2058179292
+      GracieSketchesBack_0: 440770008
+      GracieSketchesBack_10: -2119290647
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
