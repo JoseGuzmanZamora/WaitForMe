@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float zOffset = -20;
+    public float zOffset;
+    public float yOffset;
     public GameObject Gracie;
     void Start()
     {
-        
+        zOffset = transform.position.z;
+        yOffset = transform.position.y;
     }
 
     private void FixedUpdate() {

@@ -22,7 +22,11 @@ public class GhostMovement : MonoBehaviour
         var zDifference = target.z - currentPosition.z;
         OrientationProcess(xDifference);
 
-        var newPosition = new Vector3(xDifference, transform.position.y, zDifference).normalized * (movementSpeed * Time.deltaTime);
+        var newPosition = new Vector3(xDifference, transform.position.y, zDifference).normalized * (movementSpeed * Time.fixedDeltaTime);
+        if (zDifference != 0 && xDifference == 0)
+        {
+            newPosition = new Vector3(xDifference, transform.position.y, zDifference * 2) * (movementSpeed * Time.fixedDeltaTime);
+        }
         //rb.MovePosition(transform.position + newPosition);
         rb.AddForce(newPosition);
     }

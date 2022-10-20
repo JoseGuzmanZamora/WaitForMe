@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class WeaponManager : MonoBehaviour
 {
-    public float delay = 3f;
-    public float radius = 5f;
-    public float force = 700f;
+    public float delay = 2f;
+    public float radius = 10f;
+    public float force = 1000f;
     public GameObject explosionEffect;
     private float countDown;
     private bool exploded = false;
