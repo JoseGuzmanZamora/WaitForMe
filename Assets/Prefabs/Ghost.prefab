@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2206483079064512645}
   - component: {fileID: 2206483079064512644}
+  - component: {fileID: 1715486730}
   m_Layer: 0
   m_Name: GenericGhosts_0
   m_TagString: Untagged
@@ -84,6 +85,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1715486730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2206483079064512642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cb7e8f9b6514dfd8dd3809f3beb0ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleSprites:
+  - {fileID: -1038869142, guid: 2a0649fff7ab4492794c6a6c65bb718c, type: 3}
+  - {fileID: 1831967105, guid: 2a0649fff7ab4492794c6a6c65bb718c, type: 3}
+  - {fileID: -1925862817, guid: 2a0649fff7ab4492794c6a6c65bb718c, type: 3}
+  - {fileID: -1840839802, guid: 2a0649fff7ab4492794c6a6c65bb718c, type: 3}
 --- !u!1 &2206483080661986527
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objective: {fileID: 0}
   movementSpeed: 5
+  facesRight: 0
 --- !u!95 &205309315
 Animator:
   serializedVersion: 4

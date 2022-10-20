@@ -8,6 +8,7 @@ public class GhostMovement : MonoBehaviour
     public int movementSpeed = 6;
     public bool facesRight = true;
     private Rigidbody rb;
+    public bool resetForce = true;
 
     private void Start() {
         rb = GetComponent<Rigidbody> ();
@@ -23,6 +24,10 @@ public class GhostMovement : MonoBehaviour
 
         var newPosition = new Vector3(xDifference, transform.position.y, zDifference).normalized * (movementSpeed * Time.deltaTime);
         rb.MovePosition(transform.position + newPosition);
+    }
+
+    private void Update() {
+        if (resetForce) rb.velocity = Vector3.zero;
     }
 
     public void OrientationProcess(float xDifference)
