@@ -5,7 +5,7 @@ using UnityEngine;
 public class GhostMovement : MonoBehaviour
 {
     public GameObject objective;
-    public int movementSpeed = 6;
+    public float movementSpeed = 0.002f;
     public bool facesRight = true;
     private Rigidbody rb;
     public bool resetForce = true;
@@ -23,7 +23,8 @@ public class GhostMovement : MonoBehaviour
         OrientationProcess(xDifference);
 
         var newPosition = new Vector3(xDifference, transform.position.y, zDifference).normalized * (movementSpeed * Time.deltaTime);
-        rb.MovePosition(transform.position + newPosition);
+        //rb.MovePosition(transform.position + newPosition);
+        rb.AddForce(newPosition);
     }
 
     private void Update() {
