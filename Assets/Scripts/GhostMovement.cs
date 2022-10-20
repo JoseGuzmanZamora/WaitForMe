@@ -9,6 +9,8 @@ public class GhostMovement : MonoBehaviour
     public bool facesRight = true;
     private Rigidbody rb;
     public bool resetForce = true;
+    public int life = 100;
+    private float lifeCounter = 2f;
 
     private void Start() {
         rb = GetComponent<Rigidbody> ();
@@ -33,6 +35,18 @@ public class GhostMovement : MonoBehaviour
 
     private void Update() {
         if (resetForce) rb.velocity = Vector3.zero;
+
+        // Check out the life counter and destroy gameobject so it wont appear floating around
+        if (life < 0)
+        {
+            lifeCounter -= Time.deltaTime;
+            if (lifeCounter < 0) Destroy(gameObject);
+        }
+    }
+
+    public void MakeDamage(int amount)
+    {
+        life -= amount;
     }
 
     public void OrientationProcess(float xDifference)

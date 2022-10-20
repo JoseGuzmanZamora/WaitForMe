@@ -822,10 +822,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 2.7739222
-  m_Height: 12.166114
+  m_Radius: 0.5394356
+  m_Height: 12.166118
   m_Direction: 1
-  m_Center: {x: -0.13619924, y: -0.7781329, z: 0}
+  m_Center: {x: -0.07119799, y: -0.7781329, z: 0.07362899}
 --- !u!114 &5225421037545252935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,6 +881,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneBomb: {fileID: 5369859733363197070, guid: eac71794148b64c768f55e49ea795617, type: 3}
+  mainCamera: {fileID: 0}
+  force: 0.0005
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 2147483647
 --- !u!1 &5225421037576158581
 GameObject:
   m_ObjectHideFlags: 0

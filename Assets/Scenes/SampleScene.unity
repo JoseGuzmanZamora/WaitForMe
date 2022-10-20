@@ -267,7 +267,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: -50
+  near clip plane: 0.01
   far clip plane: 500
   field of view: 60
   orthographic: 1
@@ -748,17 +748,13 @@ PrefabInstance:
       propertyPath: objective
       value: 
       objectReference: {fileID: 1465747306}
-    - target: {fileID: 2206483080661986339, guid: 92b8bc47153ae40bbac25122ef344295, type: 3}
-      propertyPath: movementSpeed
-      value: 0.003
-      objectReference: {fileID: 0}
     - target: {fileID: 2206483080661986526, guid: 92b8bc47153ae40bbac25122ef344295, type: 3}
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2206483080661986526, guid: 92b8bc47153ae40bbac25122ef344295, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.95
+      value: 48.6
       objectReference: {fileID: 0}
     - target: {fileID: 2206483080661986526, guid: 92b8bc47153ae40bbac25122ef344295, type: 3}
       propertyPath: m_LocalPosition.y
@@ -809,6 +805,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1465747313, guid: e4b3e51f732bf4a118d3d1cb8886b45c, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 963194227}
     - target: {fileID: 5225421037545252931, guid: e4b3e51f732bf4a118d3d1cb8886b45c, type: 3}
       propertyPath: m_Name
       value: GracieParent

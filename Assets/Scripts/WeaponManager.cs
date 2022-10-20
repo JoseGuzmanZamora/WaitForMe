@@ -7,6 +7,7 @@ public class WeaponManager : MonoBehaviour
     public float delay = 2f;
     public float radius = 10f;
     public float force = 1000f;
+    public float speed = 10;
     public GameObject explosionEffect;
     private float countDown;
     private bool exploded = false;
@@ -14,13 +15,14 @@ public class WeaponManager : MonoBehaviour
     void Start()
     {
         countDown = delay;
+        var rigidBody = GetComponent<Rigidbody>();
+        rigidBody.velocity = transform.forward * speed;
+        transform.forward = new Vector3(0,0,0);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        countDown -= Time.deltaTime;
-        if (countDown <= 0 && !exploded)
+    private void OnCollisionEnter(Collision other) {
+        Debug.Log("Collided");
+        if (!exploded)
         {
             Explode();
         }
@@ -44,9 +46,16 @@ public class WeaponManager : MonoBehaviour
                 var ghost = nearObject.GetComponent<GhostMovement>();
                 if (ghost != null)
                 {
-                    ghost.resetForce = false;
-                    rb.constraints = RigidbodyConstraints.None;
-                    rb.AddExplosionForce(force, transform.position, radius);
+                    // Make damage to possibly kill the enemy
+                    ghost.MakeDamage(10);
+
+                    if (ghost.life < 0)
+                    {
+                        ghost.resetForce = false;
+                        ghost.objective = ghost.gameObject;
+                        rb.constraints = RigidbodyConstraints.None;
+                        rb.AddExplosionForce(force, transform.position, radius);
+                    }
                 }
             }
         }
