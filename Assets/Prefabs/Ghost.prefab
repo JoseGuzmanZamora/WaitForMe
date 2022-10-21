@@ -181,9 +181,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objective: {fileID: 0}
-  movementSpeed: 0.003
+  movementSpeed: 0.002
   facesRight: 0
   resetForce: 1
+  life: 100
 --- !u!95 &205309315
 Animator:
   serializedVersion: 4

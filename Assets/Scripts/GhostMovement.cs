@@ -11,6 +11,9 @@ public class GhostMovement : MonoBehaviour
     public bool resetForce = true;
     public int life = 100;
     private float lifeCounter = 2f;
+    private Vector3 globalPosition;
+    private bool suspendMovement = false;
+    private float suspensionTimer = 1f;
 
     private void Start() {
         rb = GetComponent<Rigidbody> ();
@@ -29,8 +32,21 @@ public class GhostMovement : MonoBehaviour
         {
             newPosition = new Vector3(xDifference, transform.position.y, zDifference * 2) * (movementSpeed * Time.fixedDeltaTime);
         }
+        globalPosition = newPosition;
         //rb.MovePosition(transform.position + newPosition);
-        rb.AddForce(newPosition);
+        if (suspendMovement is false) 
+        {
+            rb.AddForce(newPosition);
+        }
+        else
+        {
+            suspensionTimer -= Time.fixedDeltaTime;
+            if (suspensionTimer <= 0)
+            {
+                suspensionTimer = 1f;
+                suspendMovement = false;
+            }
+        }
     }
 
     private void Update() {
@@ -73,6 +89,14 @@ public class GhostMovement : MonoBehaviour
             {
                 transform.localScale = new Vector3(1f, 1f, 1f);
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag == "Gracie")
+        {
+            suspendMovement = true;
+            rb.AddForce(new Vector3(globalPosition.x * -1, globalPosition.y, globalPosition.z * -1) * 20f);
         }
     }
 }

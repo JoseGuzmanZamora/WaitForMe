@@ -27,4 +27,16 @@ public class PlayerMovement : MonoBehaviour
         //rb.MovePosition(transform.position + newPosition);
         rb.AddForce(newPosition);
     }
+
+    private void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag == "Ghost")
+        {
+            var lifeController = gameObject.GetComponent<LifeController>();
+            if (lifeController != null)
+            {
+                Debug.Log("Collision with ghost");
+                lifeController.ReceiveDamage(5);
+            }
+        }
+    }
 }

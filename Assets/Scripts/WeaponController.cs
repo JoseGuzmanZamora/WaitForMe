@@ -32,25 +32,20 @@ public class WeaponController : MonoBehaviour
 
             var possibleX = transform.position.x;
             var possibleZ = transform.position.z;
+            var xChange = 0;
             if (direction.x > 0)
             {
-                possibleX += 2;
+                xChange = 2;
             }
             else if (direction.x < 0)
             {
-                possibleX -= 2;
+                xChange = -2;
             }
+            possibleX += xChange;
+            var verifiedDirection = position - (new Vector3(transform.position.x + xChange, transform.position.y, transform.position.z));
 
-            if (direction.z > 0)
-            {
-                possibleZ += 2;
-            }
-            else if (direction.z < 0)
-            {
-                possibleZ -= 2;
-            }
             var newObject = Instantiate(phoneBomb, new Vector3(possibleX, transform.position.y, possibleZ), Quaternion.identity);
-            newObject.transform.forward = direction;
+            newObject.transform.forward = verifiedDirection;
         }
     }
 
