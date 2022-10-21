@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objective: {fileID: 0}
-  movementSpeed: 0.002
+  movementSpeed: 0.0035
   facesRight: 0
   resetForce: 1
   life: 100

@@ -34,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
             var lifeController = gameObject.GetComponent<LifeController>();
             if (lifeController != null)
             {
-                Debug.Log("Collision with ghost");
                 lifeController.ReceiveDamage(5);
             }
         }
