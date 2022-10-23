@@ -17,6 +17,7 @@ public class HideController : MonoBehaviour
     private Vector3 temporalDirection;
     private float temporalTimer = 3f;
     public Vector3 globalObjective;
+    public Vector3 globalPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,6 @@ public class HideController : MonoBehaviour
     private void FixedUpdate() {
         if (normalMovement)
         {
-            Debug.Log(normalMovement);
             globalObjective = objectivePosition;
             if (!foundObjective) 
             {
@@ -62,6 +62,7 @@ public class HideController : MonoBehaviour
             {
                 newPosition = new Vector3(xDifference, transform.position.y, zDifference * 2) * (movementSpeed * Time.fixedDeltaTime);
             }
+            //globalPosition = newPosition;
             rb.AddForce(newPosition);
 
             if (temporalTimer <= 0)
@@ -98,6 +99,7 @@ public class HideController : MonoBehaviour
         {
             newPosition = new Vector3(xDifference, transform.position.y, zDifference * 2) * (movementSpeed * Time.fixedDeltaTime);
         }
+        globalPosition = newPosition;
         rb.AddForce(newPosition);
     }
 
@@ -122,20 +124,22 @@ public class HideController : MonoBehaviour
         }
     }
 
-    // private void OnCollisionStay(Collision other) {
-    //     if (other.gameObject.tag == "Environment" && normalMovement)
-    //     {
-    //         CollisionMovementChanger();
-    //     }
-    // }
+    private void OnCollisionStay(Collision other) {
+        if (other.gameObject.tag == "Environment" && normalMovement)
+        {
+            CollisionMovementChanger();
+        }
+    }
 
     private void CollisionMovementChanger()
     {
+        rb.AddForce(new Vector3(globalPosition.x * -1, globalPosition.y, globalPosition.z * -1) * 10f);
         var xDifference = objectivePosition.x - transform.position.x;
         var zDifference = objectivePosition.z - transform.position.z;
         var differenceVector = new Vector2(xDifference, zDifference);
-        //rb.AddForce(new Vector3(xDifference * -1, transform.position.y, zDifference * -1).normalized * (movementSpeed * Time.fixedDeltaTime));
+        Debug.Log(differenceVector);
         var perpendicular = Vector2.Perpendicular(differenceVector);
+        Debug.Log(perpendicular);
 
         // Find perpendicular vector to see where to move
         normalMovement = false;
