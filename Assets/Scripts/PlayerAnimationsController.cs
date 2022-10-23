@@ -12,15 +12,25 @@ public class PlayerAnimationsController : MonoBehaviour
     public GameObject backObject;
     public GameObject sideObject;
 
-    void Start()
-    {
-        
-    }
+    public bool animateFromInput;
+    public HideController hideInfo;
     
     void FixedUpdate()
     {
-        var horizontalPress = Input.GetAxis("Horizontal");
-        var verticalPress = Input.GetAxis("Vertical");
+        float horizontalPress = 0f;
+        float verticalPress = 0f;
+
+        if (animateFromInput)
+        {
+            horizontalPress = Input.GetAxis("Horizontal");
+            verticalPress = Input.GetAxis("Vertical");
+        }
+        else
+        {
+            // Animation for joy, get press from difference movement
+            horizontalPress = hideInfo.objectivePosition.x - hideInfo.transform.position.x;
+            verticalPress = hideInfo.objectivePosition.z - hideInfo.transform.position.z;
+        }
 
         if (horizontalPress > 0)
         {

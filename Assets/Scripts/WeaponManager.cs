@@ -21,7 +21,6 @@ public class WeaponManager : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        Debug.Log("Collided");
         if (!exploded)
         {
             Explode();
