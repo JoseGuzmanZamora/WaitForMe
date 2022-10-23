@@ -48,6 +48,10 @@ public class HideController : MonoBehaviour
             {
                 objectivePosition = transform.position;
                 globalObjective = objectivePosition;
+
+                // Just check if we need to hide again
+                var nearObjects = Physics.OverlapSphere(transform.position, 10f);
+                PossiblyHideAgain();
             }
         }
         else
@@ -105,6 +109,7 @@ public class HideController : MonoBehaviour
 
     void EstablishRandomObjective()
     {
+        foundObjective = false;
         var mapPosition = map.transform.position;
 
         var maxZ = mapPosition.z + (mapSize.z / 2);
@@ -147,5 +152,19 @@ public class HideController : MonoBehaviour
         //var xPerpendicular = (-zDifference)/xDifference;
         temporalDirection = new Vector3(perpendicular.x, transform.position.y, perpendicular.y);
         globalObjective = temporalDirection;
+    }
+
+    public void PossiblyHideAgain()
+    {
+        // Just check if we need to hide again
+        var nearObjects = Physics.OverlapSphere(transform.position, 50f);
+
+        foreach (var nearObject in nearObjects)
+        {
+            if (nearObject.gameObject.tag == "Gracie")
+            {
+                EstablishRandomObjective();
+            }
+        }
     }
 }
