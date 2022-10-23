@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Gracie
   - Ghost
+  - Joy
+  - Floor
+  - Environment
   layers:
   - Default
   - TransparentFX

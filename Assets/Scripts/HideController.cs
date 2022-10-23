@@ -11,8 +11,13 @@ public class HideController : MonoBehaviour
     private Vector3 seekerPosition;
     private Vector3 mapSize;
     private bool foundObjective = false;
-    public Vector3 objectivePosition;
+    private Vector3 objectivePosition;
     private Rigidbody rb;
+    private bool normalMovement = true;
+    private Vector3 temporalDirection;
+    private float temporalTimer = 3f;
+    public Vector3 globalObjective;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,14 +35,40 @@ public class HideController : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if (!foundObjective) 
+        if (normalMovement)
         {
-            MoveTowardsObjective();
-            foundObjective = FoundObjective();
+            Debug.Log(normalMovement);
+            globalObjective = objectivePosition;
+            if (!foundObjective) 
+            {
+                MoveTowardsObjective();
+                foundObjective = FoundObjective();
+            }
+            else
+            {
+                objectivePosition = transform.position;
+                globalObjective = objectivePosition;
+            }
         }
         else
         {
-            objectivePosition = transform.position;
+            // Move to other direction to avoid collides
+            temporalTimer -= Time.fixedDeltaTime;
+            var xDifference = temporalDirection.x - transform.position.x;
+            var zDifference = temporalDirection.z - transform.position.z;
+
+            var newPosition = new Vector3(xDifference, transform.position.y, zDifference).normalized * (movementSpeed * Time.fixedDeltaTime);
+            if (zDifference != 0 && xDifference == 0)
+            {
+                newPosition = new Vector3(xDifference, transform.position.y, zDifference * 2) * (movementSpeed * Time.fixedDeltaTime);
+            }
+            rb.AddForce(newPosition);
+
+            if (temporalTimer <= 0)
+            {
+                temporalTimer = 3f;
+                normalMovement = true;
+            }
         }
     }
 
@@ -81,5 +112,36 @@ public class HideController : MonoBehaviour
 
 
         objectivePosition = new Vector3(UnityEngine.Random.Range(minX, maxX), 0, UnityEngine.Random.Range(minZ, maxZ));
+        globalObjective = objectivePosition;
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag == "Environment" && normalMovement)
+        {
+            CollisionMovementChanger();
+        }
+    }
+
+    // private void OnCollisionStay(Collision other) {
+    //     if (other.gameObject.tag == "Environment" && normalMovement)
+    //     {
+    //         CollisionMovementChanger();
+    //     }
+    // }
+
+    private void CollisionMovementChanger()
+    {
+        var xDifference = objectivePosition.x - transform.position.x;
+        var zDifference = objectivePosition.z - transform.position.z;
+        var differenceVector = new Vector2(xDifference, zDifference);
+        //rb.AddForce(new Vector3(xDifference * -1, transform.position.y, zDifference * -1).normalized * (movementSpeed * Time.fixedDeltaTime));
+        var perpendicular = Vector2.Perpendicular(differenceVector);
+
+        // Find perpendicular vector to see where to move
+        normalMovement = false;
+        //var zPerpendicular = 1f;
+        //var xPerpendicular = (-zDifference)/xDifference;
+        temporalDirection = new Vector3(perpendicular.x, transform.position.y, perpendicular.y);
+        globalObjective = temporalDirection;
     }
 }

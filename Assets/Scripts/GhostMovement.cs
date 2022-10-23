@@ -14,13 +14,31 @@ public class GhostMovement : MonoBehaviour
     private Vector3 globalPosition;
     private bool suspendMovement = false;
     private float suspensionTimer = 1f;
+    private Vector3 temporalDirection;
+    private bool normalMovement = true;
+    private float temporalTimer = 1.5f;
 
     private void Start() {
         rb = GetComponent<Rigidbody> ();
     }
 
     private void FixedUpdate() {
-        var target = objective.transform.position;
+        Vector3 target = new Vector3();
+        if (normalMovement)
+        {
+            target = objective.transform.position;
+        }
+        else
+        {
+            target = temporalDirection;
+            temporalTimer -= Time.fixedDeltaTime;
+            if (temporalTimer <= 0)
+            {
+                normalMovement = true;
+                temporalTimer = 1.5f;
+                target = objective.transform.position;
+            }
+        }
         var currentPosition = transform.position;
 
         var xDifference = target.x - currentPosition.x;
@@ -98,5 +116,29 @@ public class GhostMovement : MonoBehaviour
             suspendMovement = true;
             rb.AddForce(new Vector3(globalPosition.x * -1, globalPosition.y, globalPosition.z * -1) * 20f);
         }
+        else if (other.gameObject.tag == "Environment" && normalMovement)
+        {
+            CollisionMovementChanger();
+        }
+    }
+
+    private void OnCollisionStay(Collision other) {
+        if (other.gameObject.tag == "Environment" && normalMovement)
+        {
+            CollisionMovementChanger();
+        }
+    }
+
+    private void CollisionMovementChanger()
+    {
+        rb.AddForce(new Vector3(globalPosition.x * -1, globalPosition.y, globalPosition.z * -1) * 20f);
+        var xDifference = objective.transform.position.x - transform.position.x;
+        var zDifference = objective.transform.position.z - transform.position.z;
+        var differenceVector = new Vector2(xDifference, zDifference);
+        var perpendicular = Vector2.Perpendicular(-differenceVector);
+
+        // Find perpendicular vector to see where to move
+        normalMovement = false;
+        temporalDirection = new Vector3(perpendicular.x, transform.position.y, perpendicular.y);
     }
 }

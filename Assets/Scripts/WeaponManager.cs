@@ -39,7 +39,7 @@ public class WeaponManager : MonoBehaviour
         foreach (var nearObject in nearObjects)
         {
             var rb = nearObject.GetComponent<Rigidbody>();
-            if (nearObject.tag == "MainCamera" || nearObject.tag == "Gracie") continue;
+            if (nearObject.tag == "MainCamera" || nearObject.tag == "Gracie" || nearObject.tag == "Joy") continue;
             if (rb != null)
             {
                 var ghost = nearObject.GetComponent<GhostMovement>();

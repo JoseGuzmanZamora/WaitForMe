@@ -28,8 +28,8 @@ public class PlayerAnimationsController : MonoBehaviour
         else
         {
             // Animation for joy, get press from difference movement
-            horizontalPress = hideInfo.objectivePosition.x - hideInfo.transform.position.x;
-            verticalPress = hideInfo.objectivePosition.z - hideInfo.transform.position.z;
+            horizontalPress = hideInfo.globalObjective.x - hideInfo.transform.position.x;
+            verticalPress = hideInfo.globalObjective.z - hideInfo.transform.position.z;
         }
 
         if (horizontalPress > 0)

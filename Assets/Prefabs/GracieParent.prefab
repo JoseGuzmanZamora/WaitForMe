@@ -858,6 +858,8 @@ MonoBehaviour:
   frontObject: {fileID: 5225421039103991075}
   backObject: {fileID: 5225421039108073735}
   sideObject: {fileID: 5225421038983213569}
+  animateFromInput: 1
+  hideInfo: {fileID: 0}
 --- !u!210 &1465747312
 SortingGroup:
   m_ObjectHideFlags: 0
