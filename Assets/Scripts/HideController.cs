@@ -15,9 +15,10 @@ public class HideController : MonoBehaviour
     private Rigidbody rb;
     private bool normalMovement = true;
     private Vector3 temporalDirection;
-    private float temporalTimer = 3f;
+    private float temporalTimer = 1.5f;
     public Vector3 globalObjective;
     public Vector3 globalPosition;
+    public int collisionCounter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -71,7 +72,7 @@ public class HideController : MonoBehaviour
 
             if (temporalTimer <= 0)
             {
-                temporalTimer = 3f;
+                temporalTimer = 1.5f;
                 normalMovement = true;
             }
         }
@@ -138,13 +139,13 @@ public class HideController : MonoBehaviour
 
     private void CollisionMovementChanger()
     {
+        collisionCounter ++;
         rb.AddForce(new Vector3(globalPosition.x * -1, globalPosition.y, globalPosition.z * -1) * 10f);
         var xDifference = objectivePosition.x - transform.position.x;
         var zDifference = objectivePosition.z - transform.position.z;
         var differenceVector = new Vector2(xDifference, zDifference);
-        Debug.Log(differenceVector);
         var perpendicular = Vector2.Perpendicular(differenceVector);
-        Debug.Log(perpendicular);
+        if (UnityEngine.Random.Range(1, 3) % 2 == 0) perpendicular = -perpendicular;
 
         // Find perpendicular vector to see where to move
         normalMovement = false;

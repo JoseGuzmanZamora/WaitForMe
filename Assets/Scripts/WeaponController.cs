@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-    public GameObject phoneBomb;
+    public List<GameObject> candy;
     public Camera mainCamera;
     public float force = 100;
     public LayerMask groundMask;
@@ -44,7 +45,7 @@ public class WeaponController : MonoBehaviour
             possibleX += xChange;
             var verifiedDirection = position - (new Vector3(transform.position.x + xChange, transform.position.y, transform.position.z));
 
-            var newObject = Instantiate(phoneBomb, new Vector3(possibleX, transform.position.y, possibleZ), Quaternion.identity);
+            var newObject = Instantiate(candy[UnityEngine.Random.Range(0, candy.Count - 1)], new Vector3(possibleX, transform.position.y, possibleZ), Quaternion.identity);
             newObject.transform.forward = verifiedDirection;
         }
     }

@@ -17,6 +17,7 @@ public class GhostMovement : MonoBehaviour
     private Vector3 temporalDirection;
     private bool normalMovement = true;
     private float temporalTimer = 1.5f;
+    private int collisionCounter = 0;
 
     private void Start() {
         rb = GetComponent<Rigidbody> ();
@@ -131,11 +132,13 @@ public class GhostMovement : MonoBehaviour
 
     private void CollisionMovementChanger()
     {
+        collisionCounter ++;
         rb.AddForce(new Vector3(globalPosition.x * -1, globalPosition.y, globalPosition.z * -1) * 20f);
         var xDifference = objective.transform.position.x - transform.position.x;
         var zDifference = objective.transform.position.z - transform.position.z;
         var differenceVector = new Vector2(xDifference, zDifference);
         var perpendicular = Vector2.Perpendicular(-differenceVector);
+        if (UnityEngine.Random.Range(1, 3) % 2 == 0) perpendicular = -perpendicular;
 
         // Find perpendicular vector to see where to move
         normalMovement = false;

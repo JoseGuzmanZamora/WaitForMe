@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6717527865971101665}
   - component: {fileID: 4249489729114728424}
   m_Layer: 0
-  m_Name: PhoneBomb
+  m_Name: Candy4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5369859733363197070}
-  m_LocalRotation: {x: -0, y: -0, z: 0.2664332, w: 0.96385336}
-  m_LocalPosition: {x: -3.14, y: -0.95, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5906, y: 0.5906, z: 0.5906}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.904}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5369859733363197071
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2057637743, guid: 52d17a2862c384cd08dd061cf5043d30, type: 3}
+  m_Sprite: {fileID: -1369922293, guid: 97ec2877838924301b05ec599c3d953e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,4 +133,4 @@ MonoBehaviour:
   radius: 10
   force: 0.0003
   speed: 65
-  explosionEffect: {fileID: 0}
+  explosionEffect: {fileID: 5564887191549790993, guid: cfc037757a7684061b4a3eb285110f8f, type: 3}
