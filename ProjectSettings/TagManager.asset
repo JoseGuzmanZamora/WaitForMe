@@ -9,6 +9,7 @@ TagManager:
   - Joy
   - Floor
   - Environment
+  - Coin
   layers:
   - Default
   - TransparentFX

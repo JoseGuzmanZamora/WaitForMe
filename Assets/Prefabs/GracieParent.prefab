@@ -772,6 +772,7 @@ GameObject:
   - component: {fileID: 1465747312}
   - component: {fileID: 1465747313}
   - component: {fileID: 1465747314}
+  - component: {fileID: 1465747315}
   m_Layer: 0
   m_Name: GracieParent
   m_TagString: Gracie
@@ -883,7 +884,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287f58ce19600498aa95580dd8792ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phoneBomb: {fileID: 5369859733363197070, guid: eac71794148b64c768f55e49ea795617, type: 3}
+  candy:
+  - {fileID: 5369859733363197070, guid: fd2eb8591bd4241558362e8a901bcbee, type: 3}
+  - {fileID: 5369859733363197070, guid: 6f422e18a7ecd4b8cb0e8189d819bf3f, type: 3}
+  - {fileID: 5369859733363197070, guid: 31535986cbe0a4b138ff9772d110f8c9, type: 3}
+  - {fileID: 5369859733363197070, guid: 1f748f470fc854a14af4c40d2d2387ac, type: 3}
+  - {fileID: 5369859733363197070, guid: fefb5c9784b5e43c59d0764186e510f8, type: 3}
+  - {fileID: 5369859733363197070, guid: 8e1d0f5f919ed469291ca8a0b2fbfb19, type: 3}
+  - {fileID: 5369859733363197070, guid: 4c7c623e8b4f44100b3ff833f03f3759, type: 3}
+  - {fileID: 5369859733363197070, guid: d8315061805bf4570943031ec2890e47, type: 3}
+  - {fileID: 5369859733363197070, guid: cfd5bed7f7d454147816a8ec53a92d79, type: 3}
+  - {fileID: 5369859733363197070, guid: 138511752db384d59bd933623bb72acb, type: 3}
   mainCamera: {fileID: 0}
   force: 0.0005
   groundMask:
@@ -902,6 +913,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 100
+--- !u!114 &1465747315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225421037545252931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7315867bcafa9457188b0ba50fb67284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalAvailableCoins: 0
+  availableMoney: 0
 --- !u!1 &5225421037576158581
 GameObject:
   m_ObjectHideFlags: 0
