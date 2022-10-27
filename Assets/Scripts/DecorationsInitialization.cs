@@ -27,7 +27,7 @@ public class DecorationsInitialization : MonoBehaviour
         }
     }
 
-    void InitializeObject(GameObject objectToInitialize, bool useThreshold = false)
+    public void InitializeObject(GameObject objectToInitialize, bool useThreshold = false)
     {
         var mapPosition = transform.position;
 

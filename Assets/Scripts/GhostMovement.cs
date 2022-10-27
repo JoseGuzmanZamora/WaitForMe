@@ -18,6 +18,7 @@ public class GhostMovement : MonoBehaviour
     private bool normalMovement = true;
     private float temporalTimer = 1.5f;
     private int collisionCounter = 0;
+    public SpawnerController parentController;
 
     private void Start() {
         rb = GetComponent<Rigidbody> ();
@@ -75,7 +76,11 @@ public class GhostMovement : MonoBehaviour
         if (life < 0)
         {
             lifeCounter -= Time.deltaTime;
-            if (lifeCounter < 0) Destroy(gameObject);
+            if (lifeCounter < 0) 
+            {
+                Destroy(gameObject);
+                parentController.DecreaseGhostAmount();
+            }
         }
     }
 
