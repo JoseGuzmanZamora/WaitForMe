@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EconomyManager : MonoBehaviour
 {
     public GameObject coinPrefab;
     public GameObject map;
     public int totalAvailableCoins = 0;
-    public int availableMoney = 0;
+    public int availableMoney = 75;
     private const int CoinValue = 25;
     public int totalInitialCoins = 100;
     public float inflationCounter = 0f;
     public float inflationLimit = 5f;
     private Vector3 mapSize;
     public float limitsThreshold = 30f;
+    public Text moneyText;
+    private InventoryManager inventory;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,7 @@ public class EconomyManager : MonoBehaviour
             InitializeObject(coinPrefab, true);
             totalAvailableCoins ++;
         }
+        inventory = gameObject.GetComponent<InventoryManager>();
     }
 
     // Update is called once per frame
@@ -37,6 +41,7 @@ public class EconomyManager : MonoBehaviour
             totalAvailableCoins++;
             inflationCounter = 0;
         }
+        moneyText.text = $"SBucks: {availableMoney.ToString()}";
     }
 
     private void OnTriggerEnter(Collider other) {

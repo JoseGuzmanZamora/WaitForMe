@@ -771,6 +771,7 @@ GameObject:
   - component: {fileID: 5225421037545252934}
   - component: {fileID: 1465747312}
   - component: {fileID: 1465747313}
+  - component: {fileID: 1465747316}
   - component: {fileID: 1465747314}
   - component: {fileID: 1465747315}
   m_Layer: 0
@@ -789,7 +790,7 @@ Transform:
   m_GameObject: {fileID: 5225421037545252931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5225421039103991074}
@@ -900,6 +901,21 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 2147483647
+--- !u!114 &1465747316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225421037545252931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e6bc45c506d43ecb7f1497a4130147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candyText: {fileID: 0}
+  initialCandyAmount: 50
+  currentCandyAmount: 0
 --- !u!114 &1465747314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -913,6 +929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 100
+  lifeText: {fileID: 0}
 --- !u!114 &1465747315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,8 +942,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7315867bcafa9457188b0ba50fb67284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 1839595605174706391, guid: 65fddeb3b57e944c782f2a35d146db08, type: 3}
+  map: {fileID: 0}
   totalAvailableCoins: 0
-  availableMoney: 0
+  availableMoney: 75
+  totalInitialCoins: 100
+  inflationCounter: 0
+  inflationLimit: 10
+  limitsThreshold: 30
+  moneyText: {fileID: 0}
 --- !u!1 &5225421037576158581
 GameObject:
   m_ObjectHideFlags: 0

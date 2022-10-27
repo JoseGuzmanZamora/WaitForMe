@@ -7,16 +7,17 @@ public class WeaponController : MonoBehaviour
     public Camera mainCamera;
     public float force = 100;
     public LayerMask groundMask;
+    private InventoryManager inventory;
     // Start is called before the first frame update
     void Start()
     {
-        
+        inventory = gameObject.GetComponent<InventoryManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && inventory.currentCandyAmount > 0)
         {
             Fire();
         }
@@ -47,6 +48,7 @@ public class WeaponController : MonoBehaviour
 
             var newObject = Instantiate(candy[UnityEngine.Random.Range(0, candy.Count - 1)], new Vector3(possibleX, transform.position.y, possibleZ), Quaternion.identity);
             newObject.transform.forward = verifiedDirection;
+            inventory.currentCandyAmount --;
         }
     }
 

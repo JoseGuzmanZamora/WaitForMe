@@ -1,23 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LifeController : MonoBehaviour
 {
     public int life = 100;
+    public Text lifeText;
 
     public void ReceiveDamage(int amount)
     {
-        life -= amount;
 
-        if (life < 0)
+        if (life <= 0)
         {
             Die();
         }
+        else
+        {
+            life -= amount;
+        }
+    }
+
+    private void Update() {
+        lifeText.text = $"Life: {life.ToString()}%";
     }
 
     public void Die()
     {
         Debug.Log("YOU DIED");
     }
+
+    public void TEST()
+    {}
 }
