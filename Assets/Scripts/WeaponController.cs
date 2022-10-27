@@ -8,6 +8,7 @@ public class WeaponController : MonoBehaviour
     public float force = 100;
     public LayerMask groundMask;
     private InventoryManager inventory;
+    public TimeScaleController timeScaleManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class WeaponController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && inventory.currentCandyAmount > 0)
+        if (Input.GetButtonDown("Fire1") && inventory.currentCandyAmount > 0 && !timeScaleManager.pausedGame)
         {
             Fire();
         }
