@@ -185,6 +185,7 @@ MonoBehaviour:
   facesRight: 0
   resetForce: 1
   life: 100
+  parentController: {fileID: 0}
 --- !u!95 &205309315
 Animator:
   serializedVersion: 4

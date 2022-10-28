@@ -52,4 +52,24 @@ public class MessageManager : MonoBehaviour
     {
         levelManager.FadeToLevel(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void RunCredits()
+    {
+        levelManager.FadeToLevel(2);
+    }
+
+    public void StartPlaying()
+    {
+        levelManager.FadeToLevel(1);
+    }
+
+    public void GoToMainMenu()
+    {
+        levelManager.FadeToLevel(0);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

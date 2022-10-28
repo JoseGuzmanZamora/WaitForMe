@@ -186,6 +186,6 @@ public class HideController : MonoBehaviour
         var corner4 = new Vector2(maxX - threshold, minZ + threshold);
         var options = new List<Vector2> { corner1, corner2, corner3, corner4};
         
-        return options[UnityEngine.Random.Range(0, options.Count - 1)];
+        return options[UnityEngine.Random.Range(0, options.Count)];
     }
 }

@@ -17,6 +17,7 @@ public class EconomyManager : MonoBehaviour
     public float limitsThreshold = 30f;
     public Text moneyText;
     private InventoryManager inventory;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class EconomyManager : MonoBehaviour
             totalAvailableCoins ++;
         }
         inventory = gameObject.GetComponent<InventoryManager>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -47,6 +49,7 @@ public class EconomyManager : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Coin")
         {
+            audioSource.Play();
             // Found one coin, we should adjust the amounts
             totalAvailableCoins --;
             availableMoney += CoinValue;

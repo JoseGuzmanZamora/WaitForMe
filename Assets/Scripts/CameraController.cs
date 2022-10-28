@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
         cameraWidth = cameraHeight * cam.aspect;
 
         // Calculate the min and max position based on the camera and map
-        var mapSize = mapObject.GetComponent<Renderer>().bounds.size;
+        var mapSize = mapObject != null ? mapObject.GetComponent<Renderer>().bounds.size : new Vector3();
         var minPositionX = (mapObject.transform.position.x - (mapSize.x / 2)) + (cameraWidth / 2);
         var maxPositionX = (mapObject.transform.position.x + (mapSize.x / 2)) - (cameraWidth / 2);
         var minPositionZ = (mapObject.transform.position.z - (mapSize.z / 2)) + (cameraHeight / 2) - 27;

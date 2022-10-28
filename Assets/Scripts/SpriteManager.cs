@@ -9,7 +9,9 @@ public class SpriteManager : MonoBehaviour
     void Start()
     {
         var renderer = GetComponent<SpriteRenderer>();
-        var spriteToUse = possibleSprites[UnityEngine.Random.Range(0, possibleSprites.Length - 1)];
+        var randomPosition = UnityEngine.Random.Range(0, possibleSprites.Length);
+        //Debug.Log(randomPosition);
+        var spriteToUse = possibleSprites[randomPosition];
 
         // set one of the random sprites
         renderer.sprite = spriteToUse;

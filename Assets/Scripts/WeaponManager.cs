@@ -11,6 +11,8 @@ public class WeaponManager : MonoBehaviour
     public GameObject explosionEffect;
     private float countDown;
     private bool exploded = false;
+    public AudioClip explosion;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,7 @@ public class WeaponManager : MonoBehaviour
         exploded = true;
 
         if (explosionEffect != null) Instantiate(explosionEffect, transform.position, transform.rotation);
+
 
         // Move objects logic
         var nearObjects = Physics.OverlapSphere(transform.position, radius);
