@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LifeController : MonoBehaviour
 {
     public int life = 100;
     public Text lifeText;
+    public MessageManager deathNote;
 
     public void ReceiveDamage(int amount)
     {
@@ -27,9 +29,6 @@ public class LifeController : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("YOU DIED");
+        deathNote.ShowMe();
     }
-
-    public void TEST()
-    {}
 }

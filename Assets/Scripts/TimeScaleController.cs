@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TimeScaleController : MonoBehaviour
 {
-    public MessageManager pause;
+    public List<MessageManager> messages;
     public bool pausedGame = false;
     // Start is called before the first frame update
     void Start()
@@ -14,7 +15,7 @@ public class TimeScaleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var messagesShown = (pause?.shown ?? false);
+        var messagesShown = messages.Any(m => m.shown);
 
         if (messagesShown)
         {

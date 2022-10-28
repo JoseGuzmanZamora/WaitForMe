@@ -28,6 +28,8 @@ public class HideController : MonoBehaviour
         var mapCollider = map.GetComponent<BoxCollider>();
         mapSize = mapCollider.bounds.size;
 
+        var initialPosition = GetRandomCorner();
+        transform.position = new Vector3(initialPosition.x, transform.position.y, initialPosition.y);
         // Establish initial random position
         EstablishRandomObjective();
     }
@@ -167,5 +169,23 @@ public class HideController : MonoBehaviour
                 EstablishRandomObjective();
             }
         }
+    }
+
+    public Vector2 GetRandomCorner()
+    {
+        var mapPosition = map.transform.position;
+        var maxZ = mapPosition.z + (mapSize.z / 2);
+        var minZ = mapPosition.z - (mapSize.z / 2);
+        var maxX = mapPosition.x + (mapSize.x / 2);
+        var minX = mapPosition.x - (mapSize.x / 2);
+        var threshold = 25f;
+
+        var corner1 = new Vector2(minX + threshold, maxZ - threshold);
+        var corner2 = new Vector2(minX + threshold, minZ + threshold);
+        var corner3 = new Vector2(maxX - threshold, maxZ - threshold);
+        var corner4 = new Vector2(maxX - threshold, minZ + threshold);
+        var options = new List<Vector2> { corner1, corner2, corner3, corner4};
+        
+        return options[UnityEngine.Random.Range(0, options.Count - 1)];
     }
 }

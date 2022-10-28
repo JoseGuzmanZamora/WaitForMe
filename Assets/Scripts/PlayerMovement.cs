@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
     public float movementSpeed = 5;
+    public LevelChanger levelManager;
 
     void Start()
     {
@@ -40,6 +41,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 lifeController.ReceiveDamage(5);
             }
+        }
+        else if (other.gameObject.tag == "Joy")
+        {
+            // Won the game
+            levelManager.FadeToLevel(2);
         }
     }
 }
